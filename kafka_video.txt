@@ -1,0 +1,23 @@
+Below are the commands I have used :
+1. To start zookeeper and kafka server
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+2. To create kakfa topic:
+go to window folder
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic TOPIC_TEST
+bootstrap-server
+
+3.Command to List the topics:
+kafka-topics.bat --list --bootstrap-server localhost:9092
+
+4.To start the Producer:
+C:\software\kafka_2.11-2.3.1\bin\windows
+kafka-console-producer.bat --broker-list localhost:9092 --topic TOPIC_TEST
+
+5. To start the consumer:
+C:\software\kafka_2.11-2.3.1\bin\windows
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic TOPIC_TEST --from-beginning
+
+https://www.youtube.com/watch?v=L-E0KcDWXJk
+https://www.youtube.com/watch?v=HIz0pUXhM3U
